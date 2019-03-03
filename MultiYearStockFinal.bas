@@ -80,7 +80,7 @@ Sub MultiYearStockFinal()
             End If
              
             'Find if hte current date is December 30, 2016
-            If Current_Date = 20161230 Or Current_Date = 20151230 Or Current_Date = 20141230 Then
+            If Current_Date = 20161230 Or Current_Date = 20151231 Or Current_Date = 20141231 Then
                'If current date is December 30, 2016 then set it as variable DecClose
                DecClose = Cells(i, 6).Value
                Range("N" & Summary_Table_Row).Value = DecClose
@@ -133,7 +133,7 @@ Sub MultiYearStockFinal()
         Next i
       
         ' loop through the summary table
-        For j = 2 To 30
+        For j = 2 To 60
             'add conditional colors to the yearly change data
             If Cells(j, 10).Value > 1 Then
                 Cells(j, 10).Interior.ColorIndex = 4
